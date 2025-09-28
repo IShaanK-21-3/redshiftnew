@@ -39,21 +39,10 @@ st.image(IMAGE_ADDRESS,
          caption="Redshift")
 
 
-import streamlit as st
-
-#st.image("your_logo.png", caption="Redshift")
-
-# Safely check login state
-user_logged_in = False
-if hasattr(st, "user"):
-    user_logged_in = getattr(st.user, "is_logged_in", False)
-
-if not user_logged_in:
+if not st.user.is_logged_in:
     if st.sidebar.button("Log in with Google", type="primary", icon=":material/login:"):
         st.login()
-        st.stop()
 else:
-    st.success(f"Welcome, {st.user.email} 👋")
-    # Continue with the rest of your app here
-
-
+    if st.sidebar.button("Log out", type="secondary", icon=":material/logout:"):
+        st.logout()
+        st.stop()
