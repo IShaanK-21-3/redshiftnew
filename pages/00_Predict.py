@@ -18,8 +18,8 @@ def load_pickle_model(model_path: str):
     return model
 
 # load models
-model = load_pickle_model("random_forest_regression")
-scaler_model = load_pickle_model("scaler_model")
+model = load_pickle_model("MLP_model")
+scaler_model = load_pickle_model("scaler")
 
 # Authentication check
 if not st.user.is_logged_in:
