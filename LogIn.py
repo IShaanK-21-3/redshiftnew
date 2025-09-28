@@ -29,15 +29,14 @@ st.markdown("""
 st.title("🌌 Galaxy Redshift Predictor")
 st.subheader("Unlock the Secrets of the Cosmos")
 st.write("""
-Welcome to the Galaxy Redshift Prediction Platform. Explore the mysteries of the universe by analyzing 
-and predicting galaxy redshifts. Our advanced algorithms help astronomers and researchers 
+Welcome to the Galaxy Redshift Prediction Platform. Explore the mysteries of the universe by analyzing
+and predicting galaxy redshifts. Our advanced algorithms help astronomers and researchers
 understand the expansion of the universe through the study of galaxy spectra.
 """)
 
 # Add a space-themed image
-st.image(IMAGE_ADDRESS, 
+st.image(IMAGE_ADDRESS,
          caption="Redshift")
-
 
 if not st.user.is_logged_in:
     if st.sidebar.button("Log in with Google", type="primary", icon=":material/login:"):
